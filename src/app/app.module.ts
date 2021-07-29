@@ -3,18 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DefaultComponent } from './layouts/default/default.component';
-import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { DefaultModule } from './layouts/default/default.module';
+import { AppRoutingModule } from './app-routing/app-routing.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    DefaultComponent,
-    DashboardComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    DefaultModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
