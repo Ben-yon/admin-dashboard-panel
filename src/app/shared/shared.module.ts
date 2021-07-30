@@ -3,6 +3,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MaterialModule } from '../material/material/material.module';
 
 
 
@@ -13,7 +14,8 @@ import { CommonModule } from '@angular/common';
     FooterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MaterialModule
   ],
   exports: [
     HeaderComponent,
