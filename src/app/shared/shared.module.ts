@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material/material/material.module';
+import { AreaComponent } from './widgets/area/area.component';
 
 
 
@@ -12,7 +13,8 @@ import { MaterialModule } from '../material/material/material.module';
   declarations: [
     HeaderComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
+    AreaComponent
   ],
   imports: [
     CommonModule,
