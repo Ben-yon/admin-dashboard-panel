@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
 import HC_exporting from 'highcharts/modules/exporting';
 
@@ -9,6 +9,10 @@ import HC_exporting from 'highcharts/modules/exporting';
 })
 export class CardComponent implements OnInit {
 
+  @Input() label: string = "";
+  @Input() total: string = "";
+  @Input() percentage: string = "";
+
   Highcharts = Highcharts;
   chartOptions = {};
 
@@ -17,7 +21,11 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {
     this.chartOptions = {
       chart: {
-          type: 'area'
+          type: 'area',
+          backgroundColor: null,
+          borderwidth: 0,
+          margin: [2, 2, 2, 2],
+          height: 60
       },
       title: {
           text: null
@@ -27,7 +35,11 @@ export class CardComponent implements OnInit {
       },
       tooltip: {
           split: true,
-          valueSuffix: ' millions'
+          // valueSuffix: ' hundred'
+          outside: true
+      },
+      legend:{
+        enabled: false
       },
       credits: {
         enabled: false
@@ -35,8 +47,30 @@ export class CardComponent implements OnInit {
       exporting: {
         enabled: false
       },
+      xAxis: {
+        labels: {
+          enabled: false
+        },
+        title: {
+          text: null
+        },
+        startOnTick: false,
+        endOnTick: false,
+        tickOptions: []
+      },
+      yAxis: {
+        labels: {
+          enabled: false
+        },
+        title: {
+          text: null
+        },
+        startOnTick: false,
+        endOnTick: false,
+        tickOptions: []
+      },
       series: [{
-          data: [502, 635, 809, 947]
+          data: [71, 78, 39, 66]
       }]
   }
   HC_exporting(this.Highcharts);
