@@ -22,4 +22,7 @@ export class DashboardService {
       data: [90, 80, 95, 152]
     }]
   }
+  cards(){
+    return [45, 65, 86, 120];
+  }
 }

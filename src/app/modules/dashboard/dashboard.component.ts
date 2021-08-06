@@ -9,11 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
 
   bigChart: any = [];
+  cards: any = [];
 
   constructor(private dashBoard: DashboardService) { }
 
   ngOnInit(): void {
-    this.bigChart = this.dashBoard.bigChart()
+    this.bigChart = this.dashBoard.bigChart();
+    this.cards = this.dashBoard.cards();
   }
 
 }
