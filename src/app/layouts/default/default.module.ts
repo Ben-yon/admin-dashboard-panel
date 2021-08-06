@@ -1,3 +1,4 @@
+import { DashboardService } from './../../module/dashboard.service';
 import { SharedModule } from './../../shared/shared.module';
 import { DefaultComponent } from './default.component';
 import { PostsComponent } from './../../modules/posts/posts.component';
@@ -19,6 +20,7 @@ import { MaterialModule } from 'src/app/material/material/material.module';
     RouterModule,
     SharedModule,
     MaterialModule
-  ]
+  ],
+  providers: [DashboardService]
 })
 export class DefaultModule { }

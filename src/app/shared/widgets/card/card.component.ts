@@ -1,3 +1,4 @@
+import { DashboardService } from './../../../module/dashboard.service';
 import { Component, Input, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
 import HC_exporting from 'highcharts/modules/exporting';
@@ -16,7 +17,7 @@ export class CardComponent implements OnInit {
   Highcharts = Highcharts;
   chartOptions = {};
 
-  constructor() { }
+  constructor(private dashBoard: DashboardService) { }
 
   ngOnInit(): void {
     this.chartOptions = {
