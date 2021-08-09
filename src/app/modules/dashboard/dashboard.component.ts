@@ -10,12 +10,14 @@ export class DashboardComponent implements OnInit {
 
   bigChart: any = [];
   cards: any = [];
+  pieCharts: any = [];
 
   constructor(private dashBoard: DashboardService) { }
 
   ngOnInit(): void {
     this.bigChart = this.dashBoard.bigChart();
     this.cards = this.dashBoard.cards();
+    this.pieCharts = this.dashBoard.pieCharts();
   }
 
 }
