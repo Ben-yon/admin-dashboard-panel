@@ -9,6 +9,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatMenuModule } from '@angular/material/menu'
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 const material = [
   MatSidenavModule,
@@ -19,7 +23,11 @@ const material = [
   FlexLayoutModule,
   MatMenuModule,
   MatListModule,
-  MatCardModule
+  MatCardModule,
+  MatTableModule,
+  MatInputModule,
+  MatPaginatorModule,
+  MatSortModule
 ]
 
 @NgModule({
