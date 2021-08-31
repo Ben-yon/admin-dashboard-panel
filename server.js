@@ -13,4 +13,4 @@ app.get('/', (req, res) => {
   res.sendFile('index.html', {root: 'dist/admin-dashboard-panel'});
 });
 
-app.listen(process.env.PORT || 8765);
+app.listen(process.env.PORT || 8765); 
